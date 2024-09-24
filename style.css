@@ -2,14 +2,17 @@
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: #548687;
-    text-align:center;
+    text-align: center;
 }
-.container{
+
+.container {
     height: 70vh;
 }
-.game{
+
+.game {
     height: 60vmin;
     width: 60vmin;
     display: flex;
@@ -18,21 +21,50 @@ body{
     align-items: center;
     gap: 1.5vmin;
 }
-.box{
+
+.box {
     height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
     border: none;
-    box-shadow: 0 0 1rem purple(0,0,0,0.3);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     font-size: 8vmin;
     color: #b0413e;
     background-color: #ffffc7;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
-#reset-btn{
+
+.box:hover {
+    background-color: #e3e3c9;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+#reset-btn {
     padding: 1rem;
-    font-size: 1.25;
+    font-size: 1.25rem;
     background-color: #191913;
     color: #fff;
     border-radius: 1rem;
     border: none;
+    transition: background-color 0.3s;
+}
+
+#reset-btn:hover {
+    background-color: #282828;
+}
+
+#reset-btn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 600px) {
+    .box {
+        height: 12vmin;
+        width: 12vmin;
+        font-size: 6vmin;
+    }
+
+    #reset-btn {
+        font-size: 1rem;
+    }
 }
